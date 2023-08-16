@@ -13,4 +13,7 @@ use App\Http\Controllers\JobController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::resource('jobs', JobController::class);
+
+route::get('',fn()=>to_route('jobs.index'));
+Route::resource('jobs', JobController::class)
+->only(['index']);
