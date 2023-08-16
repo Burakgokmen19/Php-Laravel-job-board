@@ -16,4 +16,4 @@ use App\Http\Controllers\JobController;
 
 route::get('',fn()=>to_route('jobs.index'));
 Route::resource('jobs', JobController::class)
-->only(['index']);
+->only(['index','show']);
