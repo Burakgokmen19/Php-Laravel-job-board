@@ -17,6 +17,31 @@
 </div>
 <div>
 <div class="mb-1 font-semibold">Experience</div>
+ <x-radio-group name="experience" :options="\App\Models\job::$experience" />
+</div>
+
+<div><div class="mb-1 font-semibold">Category</div>
+<x-radio-group name="category" :options="\App\Models\job::$category" />
+</div></div>
+</div>
+<button class=" w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+    Filter
+  </button>
+</form>
+</x-card>
+
+
+    @foreach ($jobs as $job)
+      <x-job-card class="mb-4" :$job>
+        <div>
+          <x-link-button :href="route('jobs.show', $job)">
+            Show
+          </x-link-button>
+        </div>
+      </x-job-card>
+    @endforeach
+  </x-layout>
+{{--
       <label for="experience" class="mb-1 flex items-center">
         <input type="radio" name="experience" value=""
         @checked(!request('experience'))/>
@@ -36,25 +61,4 @@
         <input type="radio" name="experience" value="senior"
         @checked('senior'===request('experience'))/>
         <span class="ml-2">Senior</span>
-      </label>
-</div>
-
-<div>4</div>
-</div>
-<button class=" w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-    Filter
-  </button>
-</form>
-</x-card>
-
-
-    @foreach ($jobs as $job)
-      <x-job-card class="mb-4" :$job>
-        <div>
-          <x-link-button :href="route('jobs.show', $job)">
-            Show
-          </x-link-button>
-        </div>
-      </x-job-card>
-    @endforeach
-  </x-layout>
+      </label> --}}
