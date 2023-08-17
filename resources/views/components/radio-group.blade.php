@@ -8,7 +8,7 @@
           @foreach ($options as $option)
           <label for="{{$name}}" class="mb-1 flex items-center">
             <input type="radio" name="{{$name}}" value="{{$option}}"
-            @checked($option===request('{{$name}}'))/>
+            @checked($option===request('category'))/>
             <span class="ml-2">{{$option}}</span>
           </label>
           @endforeach
