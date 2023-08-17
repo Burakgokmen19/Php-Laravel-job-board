@@ -11,5 +11,6 @@
             @checked($option===request('category'))/>
             <span class="ml-2">{{$option}}</span>
           </label>
+
           @endforeach
 </div>
