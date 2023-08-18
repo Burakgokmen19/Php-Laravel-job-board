@@ -23,7 +23,7 @@
                             Forget password ?
                 </div>
             </div>
-            <button type="button" class=" w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Login</button>
+           <x-button class="w-full bg-green-500">Login</x-button>
         </form>
 
 
